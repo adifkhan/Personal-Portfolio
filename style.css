@@ -10,26 +10,25 @@
   font-family: 'Poppins', sans-serif;
 }
 body {
-  background: #282e3a;
+  background: #1f242d;
   color: #fff;
   max-width: 1650px;
+  max-height: 100vh;
   margin: 0 auto;
 }
 
 /* --------style to header starts here--------- */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    padding: 20px 8%;
+    height: 70px;
+    padding: 10px 8%;
     background: #1f242d;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-  }
-  .logo {
+}
+.logo {
     font-family: 'Lobster', cursive;    
     font-size: 25px;
     color: #fff;
@@ -38,8 +37,8 @@ body {
     font-weight: 500;
     opacity: 0;
     animation: slideRight 1s ease forwards;
-  }
-  .navbar a {
+}
+.navbar a {
     display: inline-block;
     font-size: 18px;
     font-weight: 500;
@@ -50,59 +49,63 @@ body {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
-  }
-  .navbar a:hover,
-  .navbar a.active {
+}
+.navbar a:hover,
+.navbar a.active {
   color: #0ef;
 }
 /* --------style to header ends here---------- */
 
 /* -----style to Home components starts here ----*/
-.home-container {
-    width: 100%;
-    margin-top: 80px;
+.home-container{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    background: #282e3a;
     padding: 80px 8%;
-  }
-  .home-contents {
+    width: 100%;
+    height: calc(100vh - 70px);
+    transition: 0.3s .5s;
+    opacity: 0;
+    animation: containerSlide 1s ease forwards;
+}
+.home-contents {
     max-width: 700px;
-  }
-  .home-contents h3 {
+}
+.home-contents h3 {
     font-size: 28px;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: .7s;
-  }
-  .home-contents h3:nth-of-type(2) {
+}
+.home-contents h3:nth-of-type(2) {
     margin-bottom: 20px;
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
-  }
-  .home-contents h3 span {
+}
+.home-contents h3 span {
     color: #0ef;
-  }
-  .home-contents h1 {
+}
+.home-contents h1 {
     font-size: 42px;
     font-weight: 700;
     margin: -3px 0;
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
-  }
-  .home-contents p {
+}
+.home-contents p {
     font-size: 22px;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
-  }
-  .home-contents p span{
+}
+.home-contents p span{
   color:#0ef
-  }
-  .social-icon a {
+}
+.social-icon a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -119,13 +122,13 @@ body {
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
-  }
-  .social-icon a:hover {
+}
+.social-icon a:hover {
     background: #0ef;
     color: #1f242d;
     box-shadow: 0 0 15px #0ef;
-  }
-  .home-container .btn {
+}
+.home-container .btn {
     display: inline-block;
     padding: 12px 28px;
     background: #0ef;
@@ -137,28 +140,66 @@ body {
     color: #1f242d;
     font-weight: 600;
     opacity: 0;
-    animation: slideTop 1s ease forwards;
+    animation: slideRight 1s ease forwards;
     animation-delay: 2s;
-  }
-  .home-image img {
+}
+.home-image img {
     max-width: 350px;
     opacity: 0;
     animation: zoomIn 1s ease forwards,floatImage 4s ease-in-out infinite;
     animation-delay: 2s,3s;
-  }
+}
   /* -----style to Home components ends here ----*/
+  
+  /* -----style to Skill components starts here ----*/
+.skill-container{
+background: #282e3a;
+width: 100%;
+height: calc(100vh - 70px);
+transition: 0.3s .5s;
+opacity: 0;
+animation: containerSlide 1s ease forwards;
+}
+.portfolio-container{
+background: #282e3a;
+width: 100%;
+height: calc(100vh - 70px);
+transition: 0.3s .5s;
+opacity: 0;
+animation: containerSlide 1s ease forwards;
+}
+.resume-container{
+background: #282e3a;
+width: 100%;
+height: calc(100vh - 70px);
+transition: 0.3s .5s;
+opacity: 0;
+animation: containerSlide 1s ease forwards;
+}
+.contact-container{
+background-color: #282e3a;
+width: 100%;
+height: calc(100vh - 70px);
+transition: 0.3s .5s;
+opacity: 0;
+animation: containerSlide 1s ease forwards;
+}
+
+
 
 /* Responsiveness */
 @media screen and (max-width: 480px) {
     .header{
-      padding: 10px 5%;
+        padding: 10px 3%;
+    }
+    .logo{
+        font-size: 20px;
     }
      .navbar a{
-      font-size: 16px;
-      margin-left: 8px;
+      font-size: 14px;
+      margin-left: 4px;
      }
      .home-container{
-        margin-top: 45px;
         flex-direction: column;
         padding: 60px 5%;
      }
@@ -193,15 +234,13 @@ body {
         border-radius: 20px;
         box-shadow: 0 0 8px #0ef;
        }
-    }
-
+}
 @media screen and (min-width:481px) and (max-width: 768px) {
-     .navbar a{
-      font-size: 16px;
-      margin-left: 18px;
-     }
-     .home-container{
-        margin-top: 58px;
+    .navbar a{
+     font-size: 16px;
+     margin-left: 10px;
+    }
+    .home-container{
         flex-direction: column;
      }
      .home-contents{
@@ -231,41 +270,52 @@ body {
         border-radius: 20px;
         box-shadow: 0 0 8px #0ef;
        }
-    }
+}
 @media screen and (min-width:769px) and (max-width: 1024px) {
-     .home-container{
-        margin-top: 70px;
-     }
-     .home-contents{
-        width: 100%;
-     }
-     .home-image img{
-        max-width: 250px;
-     }
-     .home-contents h3{
-        font-size: 22px;
-     }
-     .home-contents h1{
-        font-size: 32px;
-        margin: 8px 0;
-     }
-     .home-contents p{
-        font-size: 18px;
-     }
-     .social-icon a{
-        width: 30px;
-        height: 30px;
-        font-size: 17px;
-       }
-       .home-contents .btn{
-        padding: 8px 14px;
-        font-size: 14px;
-        border-radius: 20px;
-        box-shadow: 0 0 8px #0ef;
-       }
+    
+    .home-contents{
+       width: 100%;
     }
+    .home-image img{
+       max-width: 250px;
+    }
+    .home-contents h3{
+       font-size: 22px;
+    }
+    .home-contents h1{
+       font-size: 32px;
+       margin: 8px 0;
+    }
+    .home-contents p{
+       font-size: 18px;
+    }
+    .social-icon a{
+       width: 30px;
+       height: 30px;
+       font-size: 17px;
+      }
+      .home-contents .btn{
+       padding: 8px 14px;
+       font-size: 14px;
+       border-radius: 20px;
+       box-shadow: 0 0 8px #0ef;
+      }
+   }
 
-    /* KEYFRAME ANIMATION HERE  */
+/* KEYFRAME ANIMATION HERE  */
+
+@keyframes containerSlide {
+    0% {
+      transform: translateX(-200vh);
+      opacity:0
+    }
+    
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
 @keyframes slideRight {
     0% {
       transform: translateX(-100px);
@@ -327,3 +377,5 @@ body {
       transform: translateY(0)
     }
   }
+  
+  
