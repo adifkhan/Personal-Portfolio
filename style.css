@@ -42,6 +42,9 @@ body {
   align-items: center;
   z-index: 100;
 }
+.header .sticky {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
 .logo {
   font-family: 'Lobster', cursive;
   font-size: 2.5rem;
@@ -185,133 +188,200 @@ span {
   border-radius: 2rem;
   text-align: center;
   border: 0.2rem solid var(--bg-color-primary);
+  transition: 0.5s ease;
+}
+.services-box .service:hover {
+  border-color: var(--main-color);
+  transform: scale(1.05);
 }
 .service i {
-  font-size: 7rem;
+  font-size: 6rem;
   color: var(--main-color);
+}
+.service h3 {
+  font-size: 2.6rem;
+}
+.service p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
 }
 /* -----style to Services components ends here ----*/
 
-/* -----style to skills components ends here ----*/
+/* -----style to Portfolio components Starts here ----*/
+.portfolio-container {
+  background: var(--bg-color-secondary);
+}
+.portfolio-container h2 {
+  margin-bottom: 4rem;
+}
+.portfolio-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+.portfolio-box .portfolio {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color-primary);
+  overflow: hidden;
+  display: flex;
+}
+.portfolio img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.portfolio:hover img {
+  transform: scale(1.1);
+}
+.portfolio .portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), var(--main-color));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+}
+.portfolio:hover .portfolio-layer {
+  transform: translateY(0);
+}
+.portfolio-layer h4 {
+  font-size: 2rem;
+}
+.portfolio-layer p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+.portfolio-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--bg-color-secondary);
+  border-radius: 50%;
+}
+.portfolio-layer a i {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+/* ------style to Portfolio components ends here------*/
 
-/* 
-Responsiveness 
-@media screen and (max-width: 480px) {
+/* -----style to Portfolio components Starts here ----*/
+.contact-container {
+  margin-bottom: 3rem;
+}
+.contact-container form {
+  max-width: 70rem;
+  margin: 1rem auto 3rem;
+  text-align: center;
+}
+.contact-container form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-container form .input-box input,
+.contact-container form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--bg-color-secondary);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+.contact-container form .input-box input {
+  width: 49%;
+}
+.contact-container form textarea {
+  resize: none;
+}
+.contact-container form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+/* ------style to skills components ends here------*/
+
+/* ------style to Footer components starts here------*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--bg-color-secondary);
+}
+.footer-text p {
+  font-size: 1.6rem;
+}
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border-radius: 0.8rem;
+  transition: 0.5s ease;
+}
+.footer-iconTop a:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--bg-color-secondary);
+}
+/* ------style to Footer components ends here------*/
+
+/*--------- Responsiveness --------------*/
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
   .header {
-    padding: 10px 5%;
+    padding: 2rem 3%;
   }
-  .navbar a {
-    font-size: 16px;
-    margin-left: 8px;
+  section {
+    padding: 10rem 3% 2rem;
   }
-  .home-container {
-    margin-top: 45px;
-    flex-direction: column;
-    padding: 60px 5%;
-  }
-  .home-contents {
-    width: 100%;
-  }
-  .home-image img {
-    max-width: 200px;
-  }
-  .home-contents h3 {
-    font-size: 18px;
-  }
-  .home-contents h1 {
-    font-size: 24px;
-    margin: 5px 0;
-  }
-  .home-contents p {
-    font-size: 14px;
-  }
-  .social-icon a {
-    width: 22px;
-    height: 22px;
-    font-size: 15px;
-    border: 1px solid #0ef;
-  }
-  .social-icon a:hover {
-    box-shadow: 0 0 10px #0ef;
-  }
-  .home-contents .btn {
-    padding: 8px 14px;
-    font-size: 12px;
-    border-radius: 20px;
-    box-shadow: 0 0 8px #0ef;
+  .footer {
+    padding: 2rem 3%;
   }
 }
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .navbar a {
-    font-size: 16px;
-    margin-left: 18px;
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
   }
-  .home-container {
-    margin-top: 58px;
-    flex-direction: column;
-  }
-  .home-contents {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
+    padding: 1rem 3%;
+    background-color: var(--bg-color-primary);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: none;
   }
-  .home-image img {
-    max-width: 250px;
+  .navbar.active {
+    display: block;
   }
-  .home-contents h3 {
-    font-size: 22px;
-  }
-  .home-contents h1 {
-    font-size: 32px;
-    margin: 8px 0;
-  }
-  .home-contents p {
-    font-size: 18px;
-  }
-  .social-icon a {
-    width: 30px;
-    height: 30px;
-    font-size: 17px;
-  }
-  .home-contents .btn {
-    padding: 8px 14px;
-    font-size: 14px;
-    border-radius: 20px;
-    box-shadow: 0 0 8px #0ef;
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .home-container {
-    margin-top: 70px;
-  }
-  .home-contents {
-    width: 100%;
-  }
-  .home-image img {
-    max-width: 250px;
-  }
-  .home-contents h3 {
-    font-size: 22px;
-  }
-  .home-contents h1 {
-    font-size: 32px;
-    margin: 8px 0;
-  }
-  .home-contents p {
-    font-size: 18px;
-  }
-  .social-icon a {
-    width: 30px;
-    height: 30px;
-    font-size: 17px;
-  }
-  .home-contents .btn {
-    padding: 8px 14px;
-    font-size: 14px;
-    border-radius: 20px;
-    box-shadow: 0 0 8px #0ef;
-  }
-} */
-
 /* KEYFRAME ANIMATION HERE  */
 /* @keyframes slideRight {
   0% {
