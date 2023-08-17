@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,45 +14,101 @@
     <!-- custom stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
-<body>
+  <body>
     <!-- Header starts here -->
     <header class="header">
-        <a href="#" class="logo">Adif</a>
-        <nav class="navbar">
-          <a href="#" style="--i:1;" class="active">Home</a>
-          <a href="#" style="--i:2;">Skills</a>
-          <a href="#" style="--i:3;">Projects</a>
-          <a href="#" style="--i:4;">About</a>
-        </nav>
-      </header>
-      <!-- Header ends here -->
+      <a href="#" class="logo">Adif</a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#home" style="--i: 1" class="active">Home</a>
+        <a href="#about" style="--i: 2">About</a>
+        <a href="#services" style="--i: 3">Services</a>
+        <a href="#" style="--i: 4">Projects</a>
+        <a href="#" style="--i: 4">Contact</a>
+      </nav>
+    </header>
+    <!-- Header ends here -->
 
-      <!-- Home section starts here -->
-    <section class="home-container">
-        <div class="home-image">
-            <img src="images/Maynul Islam Adif.png" alt="" />
-          </div>
-        <div class="home-contents">
-          <h3>Hello, It's</h3>
-          <h1>Maynul Islam Adif</h1>
-          <h3>A Passionate <span>MERN Stack Developer</span></h3>
-          <p>
-            Proficient in : <span class="skills"></span>
-          </p>
-          <div class="social-icon">
-            <a href="#" style="--i:6;"><i class="bx bxl-facebook"></i></a>
-            <a href="#" style="--i:7;"><i class="bx bxl-linkedin"></i></a>
-            <a href="#" style="--i:8;"><i class="bx bxl-github"></i></a>
-            <a href="#" style="--i:9;"><i class="bx bxl-twitter"></i></a>
-          </div>
-          <a href="#" class="btn">Download CV</a>
+    <!-- Home section starts here -->
+    <section class="home-container" id="home">
+      <div class="home-image">
+        <img src="images/Maynul Islam Adif.png" alt="" />
+      </div>
+      <div class="home-contents">
+        <h3>Hello, It's</h3>
+        <h1>Maynul Islam Adif</h1>
+        <h3>A Passionate <span>MERN Stack Developer</span></h3>
+        <p>Proficient in : <span class="skills"></span></p>
+        <div class="social-icon">
+          <a href="#" style="--i: 6"><i class="bx bxl-facebook"></i></a>
+          <a href="#" style="--i: 7"><i class="bx bxl-linkedin"></i></a>
+          <a href="#" style="--i: 8"><i class="bx bxl-github"></i></a>
+          <a href="#" style="--i: 9"><i class="bx bxl-twitter"></i></a>
         </div>
-      </section>
-      <section class="skills">
+        <a href="#" class="btn">Download CV</a>
+      </div>
+    </section>
+    <!-- Home section ends here -->
 
-      </section>
-      <!-- Home section ends here -->
-      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- About section Starts here -->
+    <section class="about-container" id="about">
+      <div class="about-img">
+        <img src="/images/Maynul Islam Adif.png" alt="" />
+      </div>
+      <div class="about-contents">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Front End Developer</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, rem
+          doloremque voluptatibus placeat obcaecati officiis natus nesciunt
+          similique tempora accusantium. Nesciunt, quia rem exercitationem
+          officia, libero labore esse tenetur illo optio quaerat harum sequi
+          tempore beatae sed sit. Exercitationem, ad?
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </section>
+    <!-- About section ends here -->
+    <section class="service-container" id="services">
+      <h2 class="heading">Our <span>Services</span></h2>
+      <div class="services-box">
+        <div class="service">
+          <i class="bx bx-code-alt"></i>
+          <h3>Web Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+            voluptatum voluptates incidunt distinctio animi neque accusamus
+            totam provident quae aperiam.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="service">
+          <i class="bx bx-code-alt"></i>
+          <h3>Web Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+            voluptatum voluptates incidunt distinctio animi neque accusamus
+            totam provident quae aperiam.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="service">
+          <i class="bx bx-code-alt"></i>
+          <h3>Web Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+            voluptatum voluptates incidunt distinctio animi neque accusamus
+            totam provident quae aperiam.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+    <!-- Services section starts here -->
+
+    <!-- Services section ends here -->
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
