@@ -37,6 +37,21 @@ window.onscroll = () => {
   navbar.classList.remove('active');
 };
 
+/* ========== Scroll reveal ==============  */
+ScrollReveal({
+  //   reset: true,
+  distance: '80px',
+  duration: 2000,
+  delay: 200,
+});
+ScrollReveal().reveal('.home-contents, .heading', { origin: 'top' });
+ScrollReveal().reveal(
+  '.home-image, .services-box,.portfolio,.contact-container form',
+  { origin: 'bottom' }
+);
+ScrollReveal().reveal('.home-contents h1,.about-img', { origin: 'left' });
+ScrollReveal().reveal('.home-contents h3,.about-contents', { origin: 'right' });
+
 /* ========== Typed effect ==============  */
 var typed = new Typed('.skills', {
   strings: [
