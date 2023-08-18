@@ -51,6 +51,8 @@ body {
   color: var(--text-color);
   letter-spacing: 3px;
   font-weight: 600;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
 }
 #menu-icon {
   font-size: 3.6rem;
@@ -58,10 +60,14 @@ body {
   display: none;
 }
 .navbar a {
+  display: inline-block;
   font-size: 1.7rem;
   color: var(--text-color);
   margin-left: 4rem;
   transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 .navbar a:hover,
 .navbar a.active {
@@ -82,16 +88,20 @@ section {
 }
 .home-image img {
   width: 30vw;
-  animation: floatImage 4s ease-in-out infinite;
+  opacity: 0;
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 0.5s, 2s;
 }
+/* .home-contents {
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+} */
 .home-contents h3 {
   font-size: 3.2rem;
   font-weight: 700;
 }
 .home-contents h3:nth-of-type(2) {
   margin-bottom: 2rem;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 0.7s;
 }
 span {
   color: var(--main-color);
@@ -153,6 +163,8 @@ span {
 }
 .about-img img {
   width: 30vw;
+  /* opacity: 0;
+  animation: slideRight 1s ease forwards; */
 }
 .heading {
   text-align: center;
@@ -186,7 +198,6 @@ span {
   gap: 2rem;
 }
 .services-box .service {
-  flex: 1 1 3rem;
   background: var(--bg-color-secondary);
   padding: 3rem 2rem 4rem;
   border-radius: 2rem;
@@ -421,10 +432,11 @@ span {
   }
   .home-container {
     flex-direction: column;
+    justify-content: center;
   }
   .home-image img {
     width: 70vw;
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
   }
   .home-contents h3 {
     font-size: 2.4rem;
@@ -437,7 +449,7 @@ span {
   }
   .about-container img {
     width: 70vw;
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
   }
   .service-container h2 {
     margin-bottom: 3rem;
@@ -463,6 +475,9 @@ span {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .home-contents p {
+    font-size: 1.8rem;
   }
   .contact-container form .input-box input {
     width: 100%;
@@ -496,7 +511,17 @@ span {
     transform: translateY(0);
   }
 }
-/* @keyframes slideRight {
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
   0% {
     transform: translateX(-100px);
     opacity: 0;
@@ -536,14 +561,3 @@ span {
     opacity: 1;
   }
 }
-@keyframes zoomIn {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-*/
