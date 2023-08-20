@@ -15,7 +15,7 @@
 :root {
   --bg-color-primary: #1f242d;
   --bg-color-secondary: #2b3341;
-  --main-color: #0ef;
+  --main-color: #ffbd00;
   --text-color: #fff;
 }
 html {
@@ -50,7 +50,7 @@ body {
   font-size: 2.5rem;
   color: var(--text-color);
   letter-spacing: 3px;
-  font-weight: 600;
+  font-weight: 400;
   opacity: 0;
   animation: slideRight 1s ease forwards;
 }
@@ -61,6 +61,7 @@ body {
 }
 .navbar a {
   display: inline-block;
+  font-weight: 500;
   font-size: 1.7rem;
   color: var(--text-color);
   margin-left: 4rem;
@@ -86,18 +87,22 @@ section {
   justify-content: space-between;
   align-items: center;
 }
+.home-image {
+  margin-right: 6%;
+}
 .home-image img {
-  width: 30vw;
+  width: 25vw;
   opacity: 0;
   animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
   animation-delay: 0.5s, 2s;
 }
-/* .home-contents {
-  opacity: 0;
-  animation: slideTop 1s ease forwards;
-} */
+.home-contents {
+  margin-left: 6%;
+  /* opacity: 0;
+  animation: slideTop 1s ease forwards; */
+}
 .home-contents h3 {
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 .home-contents h3:nth-of-type(2) {
@@ -107,12 +112,19 @@ span {
   color: var(--main-color);
 }
 .home-contents h1 {
-  font-size: 5.6rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 600;
   line-height: 1.3;
+  margin: 1rem 0;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
 }
 .home-contents p {
-  font-size: 2rem;
+  font-size: 1.6rem;
+}
+.home-contents .skills {
+  color: var(--main-color);
 }
 .home-contents p span {
   color: #0ef;
@@ -121,12 +133,12 @@ span {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background: transparent;
   border: 0.2rem solid var(--main-color);
   border-radius: 50%;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
 }
@@ -138,10 +150,9 @@ span {
 }
 .btn {
   display: inline-block;
-  padding: 1rem 2.8rem;
+  padding: 0.7rem 2rem;
   background: var(--main-color);
   border-radius: 4rem;
-  box-shadow: 0 0 1rem var(--main-color);
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   color: var(--bg-color-secondary);
@@ -149,7 +160,7 @@ span {
   transition: 0.5s ease;
 }
 .btn:hover {
-  box-shadow: none;
+  box-shadow: 0 0 1rem var(--main-color);
 }
 /* -----style to Home components ends here ----*/
 
@@ -198,6 +209,7 @@ span {
   gap: 2rem;
 }
 .services-box .service {
+  flex: 1 1 3rem;
   background: var(--bg-color-secondary);
   padding: 3rem 2rem 4rem;
   border-radius: 2rem;
@@ -363,7 +375,7 @@ span {
     font-size: 55%;
   }
   .home-contents h1 {
-    font-size: 5.2rem;
+    font-size: 4rem;
   }
   .service-container h2 {
     margin-top: 2rem;
@@ -380,13 +392,13 @@ span {
 }
 @media (max-width: 991px) {
   .header {
-    padding: 2rem 3%;
+    padding: 2rem 4%;
   }
   .home-contents h1 {
-    font-size: 4.8rem;
+    font-size: 3.8rem;
   }
   .home-contents h3 {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
   }
   section {
     padding: 10rem 3% 2rem;
@@ -416,7 +428,7 @@ span {
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 1rem 3%;
+    padding: 1rem 10%;
     background-color: var(--bg-color-primary);
     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -429,14 +441,21 @@ span {
     display: block;
     font-size: 2rem;
     margin: 3rem 0;
+    border-bottom: 1px solid var(--main-color);
   }
   .home-container {
     flex-direction: column;
     justify-content: center;
   }
+  .home-image {
+    margin-right: 0;
+  }
   .home-image img {
-    width: 70vw;
+    width: 60vw;
     margin-bottom: 7rem;
+  }
+  .home-contents {
+    margin-left: 0;
   }
   .home-contents h3 {
     font-size: 2.4rem;
